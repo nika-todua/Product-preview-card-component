@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Cream);
+}
+
+.font_mont {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.font-fraunces {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.product_card {
+    width: 750px;
+    height: auto;
+    background-color: var(--White);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+}
+
+.img_box {
+    width: 400px;
+    height: auto;
+}
+
+.img_box img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: cover;
+}
+
+.img_box .mobile_img {
+    display: none;
+}
+
+.text_cont {
+    position: relative;
+    padding: 30px;
+    width: 56%;
+    max-width: 500px;
+}
+
+.text_cont .top-p {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: var(--Dark-grayish-blue);
+}
+.text_cont .title{
+    width: 290px;
+    margin-top: 25px;
+    font-size: 44px;
+}
+.text_cont .bio{
+    margin-top: 30px;
+    font-size: 18px;
+    width: 290px;
+    color: var(--Dark-grayish-blue);
+}
+.text_cont .cash{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: start;
+}
+.text_cont .cash h2{
+    font-size: 34px;
+    color: var(--Dark-cyan);
+}
+.text_cont .cash span{
+    margin-top: 2px;
+    font-size: 16px;
+    text-decoration-line: line-through;
+    color: var(--Dark-grayish-blue);
+}
+.btn-card{
+    margin-top: 25px;
+    width: 100%;
+    height: 60px;
+    
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--White);
+    background-color: var(--Dark-cyan);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-card img{
+    width: 17px;
+    margin-right: 10px;
+}
+.btn-card:hover{
+    background-color: var(--Very-dark-blue);
+}
+@media screen and (max-width: 768px){
+    .product_card{
+        width: 90%;
+    }
+    .img_box {
+        width: 44%;
+        max-width: 400px;
+        height: auto;
+    }
+    .text_cont .top-p{
+        font-size: 16px;
+    }
+    .text_cont .title{
+        margin-top: 20px;
+        font-size: 33px;
+    }
+    .text_cont .bio {
+        margin-top: 25px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 630px){
+    .product_card{
+        margin-top: 100px;
+        margin-bottom: 62px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .img_box {
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+
+    .img_box .desktop_img {
+       display: none !important;
+    }
+    
+    .img_box .mobile_img {
+        display: flex !important;
+    }
+    .text_cont {
+        width: 100%;
+        max-width: none;
+    }
+    .text_cont .title{
+        width: 100%;
+    }
+    .text_cont .bio {
+        width: 100%;
+        max-width: 423px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 480px){
+    .text_cont .cash h2{
+        font-size: 28px;
+    }
+    .text_cont .cash span {
+        font-size: 14px;
+    }
+    .btn-card{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 390px){
+    .text_cont .title {
+        font-size: 26px;
+    }
+    .text_cont .bio {
+        font-size: 14px;
+    }
+    .text_cont {
+        padding: 20px;
+    }
+    .text_cont .cash{
+        gap: 15px;
+    }
+}
